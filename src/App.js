@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Header />
 
-        <div className='p-3'>
+        <main className='p-3'>
           <Switch>
             <Route exact path='/'>
               <Home />
@@ -28,7 +28,7 @@ function App() {
               <Product />
             </Route>
           </Switch>
-        </div>
+        </main>
 
         <Footer />
       </Router>

@@ -8,12 +8,12 @@ function CounterExample() {
             <h1>
                 {count}
             </h1>
-            <h1 onClick={() => setCount(count + 1)}>
+            <h2 onClick={() => setCount(count + 1)}>
                 Plus
-            </h1>
-            <h1 onClick={() => setCount(count - 1)}>
+            </h2>
+            <h2 onClick={() => setCount(count - 1)}>
                 Minus
-            </h1>
+            </h2>
         </div>
     )
 }

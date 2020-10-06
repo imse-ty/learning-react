@@ -19,14 +19,13 @@ export default function ProductCard(props) {
                 <div className="font-bold mb-3">
                     $ {props.product.price}
                 </div>
-                <div className="mb-3">
+                <p className="mb-3">
                     {props.product.description}
-                </div>
-                <Link
-                    to={`/products/${props.product.id}`}
-                    className="bg-blue-500 text-white p-2 flex justify-center"
-                >
-                    View
+                </p>
+                <Link to={`/products/${props.product.id}`}>
+                    <button className="bg-blue-500 text-white p-2 flex justify-center w-full">
+                        View
+                    </button>
                 </Link>
             </div>
         </div >

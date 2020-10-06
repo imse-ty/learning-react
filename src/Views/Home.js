@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 import Loader from '../Components/Loader';
 import ProductCard from '../Components/ProductCard';
 import { useAxiosGet } from '../Hooks/HTTPRequest';
 
 function Home() {
     const url = 'https://5f7b89e100bd740016909a8a.mockapi.io/products?page=1&limit=10';
+    const products = useAxiosGet(url);
     let content = null;
-    let products = useAxiosGet(url);
 
     if (products.loading) {
         content = <Loader />
     }
 
     if (products.error) {
-        content = <p>There was an error. Please refresh or try again.</p>
+        content = <p className="bg-red-300 p-3 rounded-md">There was an error. Please refresh or try again.</p>
     }
 
     if (products.data) {
